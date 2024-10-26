@@ -227,12 +227,12 @@
             height: 20px;
         }
     </style>
-<div class="top-left-button" style="padding-bottom:5px; position:relative; bottom:5px;">
-    <button class="key action menor" aria-label="Voltar" id="back-button">
-        <img src="https://cdn-icons-png.flaticon.com/512/48/48821.png" alt="Ícone de Voltar">
+<div class="top-left-button" style="padding-bottom:5px; position:relative; bottom:5px;"><a href="/">
+    <button class="key action menor" aria-label="Voltar" id="back-button" >
+        <img src="https://cdn-icons-png.flaticon.com/512/48/48821.png" alt="Ícone de Voltar" >
         
     </button>
-      
+</a>
     </button>
   </div>
 <body>
@@ -262,7 +262,7 @@
         </script>
           </div>
 
-          <div class="keyboard">
+        <div class="keyboard" style="width:87%;">
             <script>
                 const keyboardLetters = "QWERTYUIOPASDFGHJKLZXCVBNM".split("");
                 keyboardLetters.forEach(letter => {
@@ -365,7 +365,7 @@
             guess = guessArray.join('').toUpperCase();
     
             if (guess.length < wordLength) {
-                showMessage("Complete a palavra!", true);
+                showMessage("COMPLETE A PALAVRA!", true);
                 return;
             }
     
@@ -407,9 +407,9 @@
             if (normalizedGuess === normalizedWordToGuess) {
         setTimeout(() => {
             if (wordToGuess === "GIRAFA") { // Verifica se a palavra é "girafa"
-                showMessage("Você terminou os animais! 🎉");
+                showMessage("VOCÊ TERMINOU OS ANIMAIS! 🎉");
             } else {
-                showMessage("Parabéns! Você acertou! 🎉");
+                showMessage("PARABÉNS, VOCÊ ACERTOU! 🎉");
             }
                     gameEnded = true;
                 }, wordLength * 200);

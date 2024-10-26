@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha um Tema</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #212529;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" style="color:whitesmoke; text-decoration:underline;">
+        <h1 class="text-center mb-5" style="color:whitesmoke">Escolha um Tema</h1>
+        <div class="row g-4">
+        
+
+            <!-- Tema: Animais -->
+            <div class="col-md-4">
+                <div class="card" style="max-height:97%;">
+                    <img src="https://static.escolakids.uol.com.br/2021/01/varios-animais-aafricanos.jpg" alt="Animais" class="card-img-top" style="object-fit:cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Animais</h5>
+                        <p class="card-text">Explore o mundo dos animais.</p>
+                        <a href="animais.html" class="btn btn-primary" style="background-color:green; font-weight:bold">Escolher Tema</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tema: Frutas -->
+            <div class="col-md-4">
+                <div class="card" style="max-height:97%;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX72O1RRkg__8XiwaeAO36BzhEnaP9jVpisg&s" alt="Frutas" class="card-img-top" style="object-fit:cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Frutas</h5>
+                        <p class="card-text">Palavras de frutas deliciosas e coloridas.</p>
+                        <a href="frutas.html" class="btn btn-primary" style="background-color:green; font-weight:bold">Escolher Tema</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tema: Cores -->
+            <div class="col-md-4">
+                <div class="card" style="max-height:97%;">
+                    <img src="https://www.promtec.com.br/wp-content/uploads/2016/06/image04-600x600.jpg" alt="Cores" class="card-img-top" style="object-fit:cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Cores</h5>
+                        <p class="card-text">Descubra as cores do arco-íris e muito mais!</p>
+                        <a href="cores.html" class="btn btn-primary" style="background-color:green; font-weight:bold">Escolher Tema</a>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+</body>
+</html>

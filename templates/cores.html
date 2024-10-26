@@ -227,19 +227,20 @@
             height: 20px;
         }
     </style>
-<div class="top-left-button" style="padding-bottom:5px; position:relative; bottom:5px;">
+<div class="top-left-button" style="padding-bottom:5px; position:relative; bottom:5px;"><a href="/">
     <button class="key action menor" aria-label="Voltar" id="back-button">
         <img src="https://cdn-icons-png.flaticon.com/512/48/48821.png" alt="Ícone de Voltar">
         
     </button>
       
     </button>
+</a>
   </div>
 <body>
     <div class="game-container">
         <div class="header">
-            <img src="{{ image_path }}" alt="Termo Game" class="animate__animated animate__fadeIn" style="max-width:350px; max-height:350px; padding-right:5px; padding-left:5px;">
-            <h2 class="animate__animated animate__fadeInDown">O QUE É ISTO?</h2>
+            <img src="{{ imagem_cor }}" alt="Termo Game" class="animate__animated animate__fadeIn" style="max-width:350px; max-height:350px; padding-right:5px; padding-left:5px;">
+            <h2 class="animate__animated animate__fadeInDown">QUE COR É ESTA?</h2>
         </div>
         
         
@@ -251,6 +252,7 @@
             
             <button class="key action menor" id="continue-button" aria-label="Continuar" style="font-size:23px; background-color:green; margin:auto">⭢</button>
         </div>
+        
         <script>
         document.getElementById('continue-button').addEventListener('click', () => {
     if (wordToGuess === "GIRAFA") {
@@ -262,7 +264,7 @@
         </script>
           </div>
 
-          <div class="keyboard">
+        <div class="keyboard" style="width:87%;">
             <script>
                 const keyboardLetters = "QWERTYUIOPASDFGHJKLZXCVBNM".split("");
                 keyboardLetters.forEach(letter => {
@@ -282,7 +284,7 @@
     
 
     <script>
-        const wordToGuess = "{{ animal_name }}".toUpperCase();
+        const wordToGuess = "{{ cores_nome }}".toUpperCase();
         let currentRow = 0;
         const maxRows = 6;
         let currentTileIndex = 0;
@@ -365,7 +367,7 @@
             guess = guessArray.join('').toUpperCase();
     
             if (guess.length < wordLength) {
-                showMessage("Complete a palavra!", true);
+                showMessage("COMPLETE A PALAVRA!", true);
                 return;
             }
     
@@ -406,10 +408,11 @@
     
             if (normalizedGuess === normalizedWordToGuess) {
         setTimeout(() => {
-            if (wordToGuess === "GIRAFA") { // Verifica se a palavra é "girafa"
-                showMessage("Você terminou os animais! 🎉");
+            if (wordToGuess === "BRANCO") { // Verifica se a palavra é "girafa"
+                showMessage("VOCÊ TERMINOU AS CORES! 🎉");
             } else {
-                showMessage("Parabéns! Você acertou! 🎉");
+                showMessage("PARABÉNS, VOCÊ ACERTOU! 🎉");
+
             }
                     gameEnded = true;
                 }, wordLength * 200);
@@ -418,7 +421,7 @@
                 currentTileIndex = 0;
             } else {
                 setTimeout(() => {
-                    showMessage(`Fim de jogo! A palavra era ${wordToGuess} 😔`);
+                    showMessage(`FIM DE JOGO, A SUA PALAVRA ERA: ${wordToGuess} 😔`);
                     gameEnded = true;
                 }, wordLength * 200);
             }
